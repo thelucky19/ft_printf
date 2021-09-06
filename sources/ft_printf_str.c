@@ -18,7 +18,7 @@ int	ft_printf_str(char *str)
 	int	printed;
 
 	if (str == NULL)
-		return(write (1 , "(null)", 6));
+		return (write(1, "(null)", 6));
 	printed = ft_strlen(str);
 	ft_putstr_fd(str, 1);
 	return (printed);

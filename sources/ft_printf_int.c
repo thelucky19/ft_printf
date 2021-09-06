@@ -26,7 +26,7 @@ int	ft_printf_int(int i)
 		++printed;
 		aux *= -1;
 	}
-	while (aux/10 > 0)
+	while (aux / 10 > 0)
 	{
 		++printed;
 		aux /= 10;

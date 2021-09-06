@@ -17,7 +17,8 @@ static int	conversion(char c, va_list params)
 {
 	t_bool	is_valid_conversion;
 
-	is_valid_conversion = c == 'c' || c == 'i' || c == 'd' || c == 'p' || c == 's' || c == 'u' || c == 'x' || c == 'X' || c == '%';
+	is_valid_conversion = c == 'c' || c == 'i' || c == 'd' || c == 'p'
+		|| c == 's' || c == 'u' || c == 'x' || c == 'X' || c == '%';
 	if (!is_valid_conversion)
 		return (-1);
 	if (c == 'c')
@@ -31,9 +32,9 @@ static int	conversion(char c, va_list params)
 	if (c == 'u')
 		return (ft_printf_unsigned_int(va_arg(params, unsigned int)));
 	if (c == 'x')
-		return (ft_printf_hexadec_int(va_arg(params, int)));
+		return (ft_printf_hexadec_unsigned_int(va_arg(params, int)));
 	if (c == 'X')
-		return (ft_printf_hexadec_uppercase_int(va_arg(params, int)));
+		return (ft_printf_hexadec_uppercase_unsigned_int(va_arg(params, int)));
 	return (write(1, &c, 1));
 }
 

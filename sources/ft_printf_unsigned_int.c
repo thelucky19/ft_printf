@@ -15,10 +15,10 @@
 
 int	ft_printf_unsigned_int(unsigned int u)
 {
-	int printed;
+	int	printed;
 
 	printed = 0;
 	if (u > 9)
 		printed += ft_printf_unsigned_int(u / 10);
-	return(printed += ft_printf_char('0' + (u % 10)));
+	return (printed += ft_printf_char('0' + (u % 10)));
 }

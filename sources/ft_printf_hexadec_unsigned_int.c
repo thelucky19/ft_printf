@@ -13,7 +13,24 @@
 #include "libft.h"
 #include "ft_printf.h"
 
-int	ft_printf_hexadec_int(int x)
+static int	euclidian_remainder(unsigned int dividend, unsigned int divisor)
 {
-	return (printf("%x", x));
+	unsigned int	quotient;
+
+	quotient = dividend / divisor;
+	return (dividend - quotient * divisor);
+}
+
+int	ft_printf_hexadec_unsigned_int(unsigned int x)
+{
+	int				printed;
+	unsigned int	remainder;
+
+	printed = 0;
+	if (x > 15)
+		printed += ft_printf_hexadec_unsigned_int(x / 16);
+	remainder = euclidian_remainder(x, 16);
+	if (remainder < 10)
+		return (printed += ft_printf_char('0' + remainder));
+	return (printed += ft_printf_char('a' + remainder - 10));
 }

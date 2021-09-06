@@ -14,13 +14,12 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stdio.h>
 
 int	ft_printf(const char *format_str, ...);
 
 int	ft_printf_char(char c);
-int	ft_printf_hexadec_int(int x);
-int	ft_printf_hexadec_uppercase_int(int x);
+int	ft_printf_hexadec_unsigned_int(unsigned int x);
+int	ft_printf_hexadec_uppercase_unsigned_int(unsigned int x);
 int	ft_printf_int(int i);
 int	ft_printf_ptr(void *ptr);
 int	ft_printf_str(char *str);

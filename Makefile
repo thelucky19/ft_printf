@@ -24,9 +24,9 @@ SOURCES_PATH	= ./sources
 OBJECTS_PATH	= ./objects
 
 INCLUDES_FILES	= libft.h ft_printf.h
-SOURCES_FILES	= ft_printf.c ft_printf_char.c ft_printf_hexadec_int.c \
-			ft_printf_hexadec_uppercase_int.c ft_printf_int.c ft_printf_ptr.c \
-			ft_printf_str.c ft_printf_unsigned_int.c \
+SOURCES_FILES	= ft_printf.c ft_printf_char.c ft_printf_unsigned_int.c \
+			ft_printf_hexadec_uppercase_unsigned_int.c ft_printf_int.c \
+			ft_printf_ptr.c ft_printf_str.c ft_printf_hexadec_unsigned_int.c \
 			\
 			ft_isascii.c ft_isprint.c ft_isalpha.c ft_isdigit.c \
 			ft_isalnum.c ft_tolower.c ft_toupper.c ft_strlen.c ft_strlcpy.c \
